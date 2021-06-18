@@ -24,7 +24,7 @@ import java.util.concurrent.Executors;
 public class HttpServer {
     private ServerSocket serverSocket;
     private static HttpServer _instance = new HttpServer();
-
+    int port = getPort();
     private HttpServer() {
 
     }
@@ -38,7 +38,7 @@ public class HttpServer {
     }
 
     public void startServer(String[] args) throws IOException {
-        int port = 35005;
+
         try {
             serverSocket = new ServerSocket(port);
         } catch (IOException e) {
@@ -54,6 +54,7 @@ public class HttpServer {
             @Override
             public void run() {
                 try {
+                    System.out.println("Listo para recibir en el puerto: " + port);
                     Socket clientSocket = serverSocket.accept();
                     processRequest(clientSocket);
 
@@ -137,5 +138,11 @@ public class HttpServer {
         return "HTTP/1.1 200 OK\r\n"
                 + "Content-Type:" + type + "\r\n"
                 + "\r\n" + outmsg;
+    }
+    static int getPort() {
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 3600; //returns default port if heroku-port isn't set (i.e on localhost)
     }
 }
