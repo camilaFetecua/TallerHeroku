@@ -50,31 +50,35 @@ public class HttpServer {
 
     public void starRequests() throws IOException {
         ExecutorService executorService = Executors.newFixedThreadPool(4);
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    System.out.println("Listo para recibir en el puerto: " + port);
-                    Socket clientSocket = serverSocket.accept();
-                    processRequest(clientSocket);
+        while (true) {
+            executorService.submit(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        System.out.println("Listo para recibir en el puerto: " + port);
+                        Socket clientSocket = serverSocket.accept();
+                        processRequest(clientSocket);
 
-                } catch (IOException e) {
-                    System.out.println(e.getMessage());
+                    } catch (IOException e) {
+                        System.out.println(e.getMessage());
+                    }
+
                 }
-
+            });
+            boolean running = true;
+            while (running) {
+                Scanner scanner = new Scanner(System.in);
+                String line = scanner.nextLine();
+                if (line.contains("Salir")) {
+                    executorService.shutdown();
+                    running = false;
+                }
             }
-        });
-        boolean running = true;
-        while (running) {
-            Scanner scanner = new Scanner(System.in);
-            String line = scanner.nextLine();
-            if (line.contains("Salir")) {
-                executorService.shutdown();
-                running = false;
-            }
+            executorService.shutdown();
+            serverSocket.close();
         }
-        serverSocket.close();
     }
+
 
     public void processRequest(Socket clientSocket) throws IOException {
         PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
@@ -138,9 +142,11 @@ public class HttpServer {
                 System.out.println(line);
                 outmsg = outmsg + line;
             }
+
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
         }
+
         return "HTTP/1.1 200 OK\r\n"
                 + "Content-Type:" + type + "\r\n"
                 + "\r\n" + outmsg;
