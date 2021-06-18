@@ -1,7 +1,5 @@
 package edu.escuelaing.arsw.Writer;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -9,20 +7,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class ErrorWriter implements ResorceWriter{
+public class WriteE implements WriterR {
     private final String message;
 
-    /**
-     * @param message Codigo+info
-     */
-    public ErrorWriter(String message ){
+
+    public WriteE(String message ){
         this.message=message;
     }
 
     /**
-     * Escribe un HTML con el mensaje del contructor al socket del cliente
-     * @param file Es ignorando este parametro en esta implementacion.
-     * @param clientSocket socket del cliente.
+     * Utiliza el mensaje del constructor al socjet para escribir un Html
      */
     @Override
     public void write(String file, Socket clientSocket) {
@@ -43,7 +37,7 @@ public class ErrorWriter implements ResorceWriter{
             out.println(outputLine);
             out.close();
         } catch (IOException ex) {
-            Logger.getLogger(ErrorWriter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WriteE.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

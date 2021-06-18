@@ -19,142 +19,83 @@ import java.util.concurrent.Executors;
 
 /**
  * Clase donde se implementa el Servidor
+ * Desarrollada en clase con el Profesor.
  */
 
-public class HttpServer {
-    private ServerSocket serverSocket;
-    private static HttpServer _instance = new HttpServer();
-    int port = getPort();
-    private HttpServer() {
+public class HttpServer implements Runnable{
+
+    private static HttpServer instance;
+    private static final  Object lock= new Object();
+    private ExecutorService executorService;
+    private ServerSocket serverSocket=null;
+
+    private HttpServer (){
+        executorService = Executors.newCachedThreadPool();
 
     }
-
-    private static HttpServer getInstance() {
-        return _instance;
+    private HttpServer(int n){
+        executorService = Executors.newFixedThreadPool(n);
     }
 
-    public static void main(String... args) throws IOException {
-        HttpServer.getInstance().startServer(args);
-    }
-
-    public void startServer(String[] args) throws IOException {
-
+    /**
+     * Corre el servidor hasta qye el ServerSocket se cierra, y por cada uno cre un hilo.
+     */
+    @Override
+    public void run() {
+        int port=getPort();
         try {
             serverSocket = new ServerSocket(port);
         } catch (IOException e) {
-            System.err.println("Could not listen on port: " + port);
+            System.err.println("Could not listen on port: "+port);
             System.exit(1);
         }
-        starRequests();
-    }
-
-    public void starRequests() throws IOException {
-        ExecutorService executorService = Executors.newFixedThreadPool(4);
-        while (true) {
-            executorService.submit(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        System.out.println("Listo para recibir en el puerto: " + port);
-                        Socket clientSocket = serverSocket.accept();
-                        processRequest(clientSocket);
-
-                    } catch (IOException e) {
-                        System.out.println(e.getMessage());
-                    }
-
+        System.out.println("Listo para recibir en el puerto: "+ port);
+        try {
+            while (true) {
+                synchronized (lock) {
+                    Socket clientSocket = serverSocket.accept();
+                    Runnable process = new SocketClient(clientSocket);
+                    executorService.execute(process);
                 }
-            });
-            boolean running = true;
-            while (running) {
-                Scanner scanner = new Scanner(System.in);
-                String line = scanner.nextLine();
-                if (line.contains("Salir")) {
-                    executorService.shutdown();
-                    running = false;
-                }
+
             }
+        } catch (IOException ex) {
             executorService.shutdown();
+            while (!executorService.isTerminated()) {
+            }
+        }
+    }
+
+    /**
+     * Para el Socket y el server
+     */
+    public void Detener() {
+        try {
             serverSocket.close();
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage()+": El socket ni pudo ser inciado");
         }
     }
 
-
-    public void processRequest(Socket clientSocket) throws IOException {
-        PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(clientSocket.getInputStream()));
-        String inputLine, outputLine;
-        String method = "";
-        String path = "";
-        String version = "";
-        List<String> headers = new ArrayList<String>();
-        while ((inputLine = in.readLine()) != null) {
-            if (method.isEmpty()) {
-                String[] requestStrings = inputLine.split(" ");
-                method = requestStrings[0];
-                path = requestStrings[1];
-                version = requestStrings[2];
-                System.out.println("reques: " + method + " " + path + " " + version);
-            } else {
-                System.out.println("header: " + inputLine);
-                headers.add(inputLine);
-            }
-            System.out.println("Received: " + inputLine);
-            if (!in.ready()) {
-                break;
-            }
-        }
-        String responseMessage = createResponse(path);
-        out.println(responseMessage);
-
-        out.close();
-
-        in.close();
-
-        clientSocket.close();
+    public static void main(String[] args) {
+        getInstance().run();
     }
 
-    public String createResponse(String path) {
-        String type = "text/html";
-        if (path.endsWith(".css")) {
-            type = "text/css";
-        } else if (path.endsWith(".js")) {
-            type = "text/javascript";
-        } else if (path.endsWith(".jpeg")) {
-            type = "image/jpeg";
-        } else if (path.endsWith(".png")) {
-            type = "image/png";
-        }
-
-
-        Path file = Paths.get("./www" + path);
-        if (path.equals("/") || path.equals("")){
-            file= Paths.get("./www/mypage.html");
-        }else{
-            System.out.println("No es vacio"+ path);
-        }
-        Charset charset = Charset.forName("UTF-8");
-        String outmsg = "";
-        try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-                outmsg = outmsg + line;
+    public static HttpServer getInstance(){
+        if(instance==null){
+            synchronized(HttpServer.class){
+                instance=new HttpServer();
             }
-
-        } catch (IOException x) {
-            System.err.format("IOException: %s%n", x);
         }
-
-        return "HTTP/1.1 200 OK\r\n"
-                + "Content-Type:" + type + "\r\n"
-                + "\r\n" + outmsg;
+        return instance;
     }
+
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
         return 3600; //returns default port if heroku-port isn't set (i.e on localhost)
     }
+
+
 }

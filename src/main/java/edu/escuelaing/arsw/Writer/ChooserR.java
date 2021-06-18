@@ -2,25 +2,21 @@ package edu.escuelaing.arsw.Writer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ResourceChooser {
-    // Permite a partir de un string devolver un Writer
-    public static Map<String,ResourceWriter> selector=new HashMap<String,ResourceWriter>(){{
+public class ChooserR {
+    /**
+     * Devuelve el write apartir de un string
+     */
+    public static Map<String, WriterR> selector=new HashMap<String, WriterR>(){{
         put("html",new TextWriter("html"));
-        put("png",new ImageWriter("png"));
-        put("jpg",new ImageWriter("jpg"));
+        put("png", (WriterR) new WriterI("png"));
+        put("jpg", (WriterR) new WriterI("jpg"));
         put("js",new TextWriter("javascript"));
         put("css",new TextWriter("css"));
-        put("err",new ErrorWriter("501 Ese tipo no se admite"));
+        put("err", (WriterR) new WriteE("501 Ese tipo no se admite"));
     }
     };
 
-    /**
-     * A partir de un string devuelve un Writer
-     * @param path el path del recurso web
-     * @return Devuelve el ResourceWriter para el tipo de archivo especifico.
-     * @throws Exception si el path no esta bien formado o si no es un archivo
-     */
-    public static ResourceWriter choose(String path) throws Exception{
+    public static WriterR choose(String path) throws Exception{
         String resource="";
         try{
             String[] s=path.split("\\.");

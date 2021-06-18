@@ -6,15 +6,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class ImageWriter ResourceWriter {
+public class WriterI implements WriterR {
     private final String type;
 
-    public ImageWriter(String type) {
+    public WriterI(String type) {
         this.type = type;
     }
 
     /**
-     * Escribe bits de una imagen utilizando el socket del cliente.
+     * Utiliza el socket del cliente para escribe bits de una imagen.
      * @param file path del archivo
      * @param clientSocket para responder
      */
@@ -35,7 +35,7 @@ public class ImageWriter ResourceWriter {
             binaryOut.write(bytes);
             binaryOut.close();
         } catch (IOException ex) {
-            new ErrorWriter("404 NOT FOUND").write("", clientSocket);
+            new WriteE("404 NOT FOUND").write("", clientSocket);
         }
     }
 
