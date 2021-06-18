@@ -23,7 +23,7 @@ public class TextWriter implements WriterR {
         try {
             String outputLine;
             out = new PrintWriter(clientSocket.getOutputStream(), true);
-            BufferedReader bf = new BufferedReader(new FileReader("resources" + file));
+            BufferedReader bf = new BufferedReader(new FileReader("www" + file));
             outputLine = "HTTP/1.1 200 OK\r\n";
             outputLine+="Content-Type: text/"+type+"\r\n";
             outputLine+="\r\n\r\n";

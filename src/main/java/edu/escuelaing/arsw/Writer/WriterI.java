@@ -22,7 +22,7 @@ public class WriterI implements WriterR {
     public void write(String file,Socket clientSocket) {
         FileInputStream inputImage;
         try {
-            File graphicResource= new File("resources" +file);
+            File graphicResource= new File("www" +file);
             inputImage = new FileInputStream(graphicResource);
             byte[] bytes = new byte[(int) graphicResource.length()];
             inputImage.read(bytes);
