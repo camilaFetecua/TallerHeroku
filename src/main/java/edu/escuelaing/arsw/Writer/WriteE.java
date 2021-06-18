@@ -32,9 +32,6 @@ public class WriteE implements WriterR {
                     + "<meta charset=\"UTF-8\">"
                     + "<title>"+message+"</title>\n"
                     + "</head>"
-                    + "<body>"
-                    + "<h1>Error "+message+ "</h1>"
-                    + "</body>"
                     + "</html>";
             out.println(outputLine);
             out.close();

@@ -14,7 +14,7 @@ public class WriterI implements WriterR {
     }
 
     /**
-     * Utiliza el socket del cliente para escribe bits de una imagen.
+     * Utiliza el socket del cliente para escribir bits de una imagen.
      * @param file path del archivo
      * @param clientSocket para responder
      */

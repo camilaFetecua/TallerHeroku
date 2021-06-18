@@ -26,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/ChooserR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/ChooserR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriteE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriteE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriterI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriterI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,22 +245,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="126" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623896944950" />
-    <state width="1323" height="247" key="GridCell.Tab.0.bottom" timestamp="1624054375971">
+    <state width="1323" height="247" key="GridCell.Tab.0.bottom" timestamp="1624056379986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624054375971" />
-    <state width="1323" height="247" key="GridCell.Tab.0.center" timestamp="1624054375971">
+    <state width="1323" height="247" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624056379986" />
+    <state width="1323" height="247" key="GridCell.Tab.0.center" timestamp="1624056379986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624054375971" />
-    <state width="1323" height="247" key="GridCell.Tab.0.left" timestamp="1624054375971">
+    <state width="1323" height="247" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624056379986" />
+    <state width="1323" height="247" key="GridCell.Tab.0.left" timestamp="1624056379986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624054375971" />
-    <state width="1323" height="247" key="GridCell.Tab.0.right" timestamp="1624054375971">
+    <state width="1323" height="247" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624056379986" />
+    <state width="1323" height="247" key="GridCell.Tab.0.right" timestamp="1624056379986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624054375971" />
+    <state width="1323" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624056379986" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1623870867767">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -280,10 +281,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1624050574151" />
-    <state x="492" y="130" width="585" height="592" key="find.popup" timestamp="1624053977721">
+    <state x="492" y="130" width="585" height="592" key="find.popup" timestamp="1624056245268">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="130" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1624053977721" />
+    <state x="492" y="130" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1624056245268" />
     <state x="65" y="25" key="new project wizard" timestamp="1623938570671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
