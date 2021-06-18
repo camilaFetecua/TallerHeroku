@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a91ce7a-8b8f-4b9b-936f-aaf8bb62736b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/SocketClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/ChooserR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/TextWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriteE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriterI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/WriterR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/ChooserR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/escuelaing/arsw/Writer/ChooserR.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,22 +243,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="126" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623896944950" />
-    <state width="637" height="247" key="GridCell.Tab.0.bottom" timestamp="1624051516580">
+    <state width="1323" height="247" key="GridCell.Tab.0.bottom" timestamp="1624052462707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="637" height="247" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624051516580" />
-    <state width="637" height="247" key="GridCell.Tab.0.center" timestamp="1624051516579">
+    <state width="1323" height="247" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624052462707" />
+    <state width="1323" height="247" key="GridCell.Tab.0.center" timestamp="1624052462707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="637" height="247" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624051516579" />
-    <state width="637" height="247" key="GridCell.Tab.0.left" timestamp="1624051516579">
+    <state width="1323" height="247" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624052462707" />
+    <state width="1323" height="247" key="GridCell.Tab.0.left" timestamp="1624052462707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="637" height="247" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624051516579" />
-    <state width="637" height="247" key="GridCell.Tab.0.right" timestamp="1624051516580">
+    <state width="1323" height="247" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624052462707" />
+    <state width="1323" height="247" key="GridCell.Tab.0.right" timestamp="1624052462707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="637" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624051516580" />
+    <state width="1323" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624052462707" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1623870867767">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -287,10 +279,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1624050574151" />
-    <state x="492" y="130" width="585" height="564" key="find.popup" timestamp="1624048215342">
+    <state x="492" y="130" width="585" height="564" key="find.popup" timestamp="1624052507031">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="130" width="585" height="564" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1624048215342" />
+    <state x="492" y="130" width="585" height="564" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1624052507031" />
     <state x="65" y="25" key="new project wizard" timestamp="1623938570671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
