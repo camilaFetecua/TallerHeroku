@@ -7,11 +7,11 @@ public class ChooserR {
      * Devuelve el write apartir de un string
      */
     public static Map<String, WriterR> selector=new HashMap<String, WriterR>(){{
-        put("html",new TextWriter(".html"));
-        put("png", (WriterR) new WriterI(".png"));
-        put("jpg", (WriterR) new WriterI(".jpg"));
-        put("js",new TextWriter(".javascript"));
-        put("css",new TextWriter(".css"));
+        put("html",new TextWriter("html"));
+        put("png", (WriterR) new WriterI("png"));
+        put("jpg", (WriterR) new WriterI("jpg"));
+        put("js",new TextWriter("javascript"));
+        put("css",new TextWriter("css"));
         put("err", (WriterR) new WriteE("Tipo no admitido"));
     }
     };
