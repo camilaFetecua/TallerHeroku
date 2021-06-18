@@ -31,7 +31,7 @@ public class WriteE implements WriterR {
                     + "<title>"+message+"</title>\n"
                     + "</head>"
                     + "<body>"
-                    + "<h1> "+message+ "</h1>"
+                    + "<h1>"+message+ "</h1>"
                     + "</body>"
                     + "</html>";
             out.println(outputLine);
@@ -44,6 +44,6 @@ public class WriteE implements WriterR {
 
     @Override
     public String exactType() {
-        return "";
+        return "error";
     }
 }
