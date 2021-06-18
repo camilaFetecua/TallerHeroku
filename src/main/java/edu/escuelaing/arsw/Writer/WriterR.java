@@ -9,5 +9,4 @@ public interface WriterR {
      */
     public void write(String file,Socket clientSocket);
     public String exactType();
-
 }

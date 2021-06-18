@@ -12,7 +12,7 @@ public class ChooserR {
         put("jpg", (WriterR) new WriterI("jpg"));
         put("js",new TextWriter("javascript"));
         put("css",new TextWriter("css"));
-        put("", (WriterR) new WriteE(""));
+        put("err", (WriterR) new WriteE(""));
     }
     };
 
@@ -25,7 +25,7 @@ public class ChooserR {
             throw new Exception(" Peticion mal formada");
         }
         if (!selector.containsKey(resource)){
-            return selector.get("");
+            return selector.get("err");
         }else{
             return selector.get(resource);
         }
