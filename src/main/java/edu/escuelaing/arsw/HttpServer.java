@@ -123,7 +123,13 @@ public class HttpServer {
             type = "image/png";
         }
 
+
         Path file = Paths.get("./www" + path);
+        if (path.equals("/") || path.equals("")){
+            file= Paths.get("./www/mypage.html");
+        }else{
+            System.out.println("No es vacio"+ path);
+        }
         Charset charset = Charset.forName("UTF-8");
         String outmsg = "";
         try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
