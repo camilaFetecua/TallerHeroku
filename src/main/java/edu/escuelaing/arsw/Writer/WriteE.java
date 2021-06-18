@@ -17,6 +17,8 @@ public class WriteE implements WriterR {
 
     /**
      * Utiliza el mensaje del constructor al socjet para escribir un Html
+
+     *
      */
     @Override
     public void write(String file, Socket clientSocket) {
@@ -31,7 +33,7 @@ public class WriteE implements WriterR {
                     + "<title>"+message+"</title>\n"
                     + "</head>"
                     + "<body>"
-                    + "<h1>"+message+ "</h1>"
+                    + "<h1>Error "+message+ "</h1>"
                     + "</body>"
                     + "</html>";
             out.println(outputLine);
