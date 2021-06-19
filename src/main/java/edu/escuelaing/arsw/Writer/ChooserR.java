@@ -12,7 +12,7 @@ public class ChooserR {
         put("jpg",new WriterI("jpg"));
         put("js",new TextWriter("javascript"));
         put("css",new TextWriter("css"));
-        put("err",new WriteE("Tipo no conciderado"));
+        put("err",new WriteE("Ese tipo no se admite"));
     }
     };
 
