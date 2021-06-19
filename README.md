@@ -1,17 +1,20 @@
 # SERVIDOR WEB CONCURRENTE
 ## Taller ARSW 2021-i / 18 Junio del 2021
 
-  Este repositorio muestre una versión concurrente de su servidor web. 
+  Este repositorio muestre una versión concurrente de su servidor web desplegado en [Heroku](https://floating-reaches-52674.herokuapp.com/)
+  
 
 # Prerequisitos 
   + Git version 2.25.1
   + Apavhe Maven version 4.0.0
   + Java version 11.0.11
+  + Apache JMeter version: 5.4.1
   
   Para verificar que esten instalados los programas puede usar los suguientes comandos
     + mvn --version
     + git version
     +java --version
+    
        
 # Ejecucion del proyecto
 
