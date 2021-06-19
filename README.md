@@ -1,5 +1,5 @@
 # SERVIDOR WEB CONCURRENTE
-## Taller ARSW 2021-i / 16 Junio del 2021
+## Taller ARSW 2021-i / 18 Junio del 2021
 
   Este repositorio muestre una versión concurrente de su servidor web. 
 
