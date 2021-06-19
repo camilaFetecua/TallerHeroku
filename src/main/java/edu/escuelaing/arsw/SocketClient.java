@@ -33,11 +33,11 @@ public class SocketClient implements Runnable{
     }
 
     /**
-     * Captira el path de la petcicion
+     * Captura el path de la petcicion
      * @param in del Socket
      * @return path del archivo
      * @throws IOException
-     * @throws IOException
+     *
      */
     public static String getPath(BufferedReader in) throws IOException, IOException {
         String inputLine,path="";
