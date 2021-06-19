@@ -18,7 +18,7 @@ public class WriteE implements WriterR {
     /**
      * Utiliza el mensaje del constructor al socjet para escribir un Html
 
-     *
+     * @param clientSocket socket del cliente.
      */
     @Override
     public void write(String file, Socket clientSocket) {
