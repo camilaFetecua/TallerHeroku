@@ -28,13 +28,20 @@
 
      java -cp ServidorConcurrente-1.0-SNAPSHOT.jar edu.escuelaing.arsw.HttpServer
      
-   Para ejecutar las pruebas se debe utilizar el siguiente comando , pero es importante antes de ejecutar las pruebas ejecutar el servidor
-   
-    java -cp ServidorConcurrente-1.0-SNAPSHOT.jar edu.escuelaing.arsw.HttpServerTest
+ 
       
 # Diagrama de clases  
 
-![Imagen](https://github.com/camilaFetecua/ServidorConcurrente/blob/master/Imagenes/Clasesservifot.PNG)
+![Imagen](https://github.com/camilaFetecua/TallerHeroku/blob/master/Imagenes/Clasesservifot.PNG)
+
+  Para este proyecto tenemos 6 clases y una interfaz 
+  + HttpServer: Clase donde implementamos y corremos nuestro servidor. 
+  + SocketClient : Clase donde se atiende cada peticion del cliente.
+  + ChooserR : Clase  utilizada por el SocketClient para escoger el WriterR y su ejecucuion. 
+  + Writerl: Clase utilizada para retornar la image. 
+  + TextWriter: Clase utilizada para retornar el texto de un archivo. 
+  + WriteE: Clase utilizada para retornar un Html.
+  + WriterR: Clase que puede ser usada cuando el tipo de archivo no es      compatible. 
 
 # Licencia
 
