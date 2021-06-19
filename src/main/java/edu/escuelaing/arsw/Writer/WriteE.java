@@ -46,6 +46,6 @@ public class WriteE implements WriterR {
 
     @Override
     public String exactType() {
-        return "error";
+        return "noc";
     }
 }
