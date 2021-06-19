@@ -41,8 +41,20 @@
   + Writerl: Clase utilizada para retornar la image. 
   + TextWriter: Clase utilizada para retornar el texto de un archivo. 
   + WriteE: Clase utilizada para retornar un Html.
-  + WriterR: Clase que puede ser usada cuando el tipo de archivo no es      compatible. 
+  + WriterR: Clase que puede ser usada cuando el tipo de archivo no es compatible. 
+ 
+ # Pruebas 
+ 
+ Para pruebas usamos JMeter el cual es un programa diseñado para realizar pruebas de carga en servidores o aplicativos Web por medio del protocolo HTTP.Para esto realizamos un peticion de 500 a la pagina mypage.html de manera concurrente y los resultados obtenidos fueron los siguientes:
+ 
+ ![Imagen](https://github.com/camilaFetecua/TallerHeroku/blob/master/Imagenes/Prueba1.PNG)
 
+La imagen anterior muestra que las peticiones fueron tomadas exitosamente. 
+ 
+ ![Imagen](https://github.com/camilaFetecua/TallerHeroku/blob/master/Imagenes/Prueba2.PNG)
+ 
+ Y en la imagen anterior podemos observar los resultados en forma de arbol con su tiempo de carga 
+ 
 # Licencia
 
   Para consultar la Licencia del proyecto haga [click aqui](https://github.com/camilaFetecua/ServidorConcurrente/blob/master/LICENSE.md)
